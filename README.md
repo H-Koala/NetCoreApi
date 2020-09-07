@@ -7,14 +7,15 @@
 [![GitHub forks](https://img.shields.io/github/forks/H-Koala/AspCoreApi.svg?style=social&label=Fork)](https://github.com/H-Koala/AspCoreApi)
 
 #### 项目介绍
-* RESTful API
-* 使用AufoFac 管理容器
-* 封装好了Dapper，开箱即用
-* Dapper 事务管理，仅需给方法打特性标签[WorkCommit]
+* Restful API
+* AufoFac支持
+* 封装好Dapper，开箱即用(Oracle+MMSYQL+MYSQL支持)
+* Dapper事务管理，仅需给方法打特性标签[WorkCommit]
 * 使用了MiniProfile 对Dapper or EF Core 生成的SQL 进行监控
-* NLog 的使用
-* JWT 支持
-* RabbitMQ 支持
+* NLog支持
+* JWT支持
+* RabbitMQ支持
 * Swagger 可视化API文档
+* AOP,拦截器，自定义中间件等支持
 ### 项目界面
 ![image text](https://raw.githubusercontent.com/H-Koala/AspCoreApi/master/AspCoreApi/img/swagger.png)
