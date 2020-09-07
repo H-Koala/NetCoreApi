@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AspCoreApi</name>
+    </assembly>
+    <members>
+        <member name="T:AspCoreApi.Controllers.Test.TestController">
+            <summary>
+            测试
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Controllers.Test.TestController.#ctor(IServices.ITest.ITestService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="TestService"></param>
+        </member>
+        <member name="M:AspCoreApi.Controllers.Test.TestController.Test(Model.ParameterModel.Test.MPeople)">
+            <summary>
+            测试Post 接口
+            </summary>
+            <param name="people"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AspCoreApi.Controllers.Test.TestController.Test(System.String)">
+            <summary>
+            测试get接口
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.Filter.Action.CustomActionFilterAttribute">
+            <summary>
+            Action 過濾器
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Filter.Action.CustomActionFilterAttribute.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Filter.Action.CustomActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            執行方法完成后
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:AspCoreApi.Filter.Action.CustomActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            執行方法前
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute">
+            <summary>
+            在Action方法上添加此特性，以声明该Action需要用户拥有指定权限才能访问
+            </summary>
+        </member>
+        <member name="P:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute.Permissions">
+            <summary>
+            需要鉴定的权限名
+            </summary>
+        </member>
+        <member name="P:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute.RequireAllPermissions">
+            <summary>
+            如果此属性设置为true, 用户必须拥有<see cref="P:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute.Permissions"/>中的全部权限
+            如果为false, 用户至少拥有<see cref="P:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute.Permissions"/>中的任一权限
+            默认值：false.
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute.#ctor(System.String[])">
+            <summary>
+            创建一个 <see cref="T:AspCoreApi.Filter.Authorization.ApiAuthorizeAttribute"/> 实例
+            </summary>
+            <param name="permissions">需要鉴定的权限名</param>
+        </member>
+        <member name="T:AspCoreApi.Filter.Authorization.AuthorizationFilterAttribute">
+            <summary>
+            在Controller类上添加此特性，以声明该控制器需要权限验证
+            </summary>
+        </member>
+        <member name="P:AspCoreApi.Filter.Authorization.AuthorizationFilterAttribute.PermissionChecker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Filter.Authorization.AuthorizationFilterAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            進入方法之前將檢查
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:AspCoreApi.Filter.Exception.GlobalExceptionFilter">
+            <summary>
+            全局異常攔截器
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Filter.Exception.GlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            发生异常时进入
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:AspCoreApi.Filter.Exception.GlobalExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            发生异常时进入
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.HelperTool.AutofacModuleRegister">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:AspCoreApi.HelperTool.AutofacModuleRegister.DbContenct">
+            <summary>
+            Db 连接字符串
+            </summary>
+        </member>
+        <member name="P:AspCoreApi.HelperTool.AutofacModuleRegister.DbType">
+            <summary>
+            Db 类型
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.HelperTool.AutofacModuleRegister.Load(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:AspCoreApi.HelperTool.CustomizeJsonOutputFormatter">
+            <summary>
+            全局null 处理
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.HelperTool.CustomizeJsonOutputFormatter.#ctor(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            
+            </summary>
+            <param name="serializerSettings"></param>
+        </member>
+        <member name="P:AspCoreApi.HelperTool.CustomizeJsonOutputFormatter.SerializerSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.HelperTool.CustomizeJsonOutputFormatter.CreateJsonWriter(System.IO.TextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.HelperTool.NullJsonWriter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.HelperTool.NullJsonWriter.#ctor(System.IO.TextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="textWriter"></param>
+        </member>
+        <member name="M:AspCoreApi.HelperTool.NullJsonWriter.WriteNull">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:AspCoreApi.Middleware.HttpContextMiddleware">
+            <summary>
+            自定义中间件
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpContextMiddleware.#ctor(Microsoft.Extensions.Logging.ILogger{AspCoreApi.Middleware.HttpContextMiddleware},Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="next"></param>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpContextMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.Middleware.HttpHeaders.Constants.ContentTypeOptionsConstants">
+             <summary>
+            與X-Content-Type-Options相關的常量
+             </summary>
+        </member>
+        <member name="F:AspCoreApi.Middleware.HttpHeaders.Constants.ContentTypeOptionsConstants.Header">
+            <summary>
+            X-Content-Type-Options的標題值
+            </summary>
+        </member>
+        <member name="F:AspCoreApi.Middleware.HttpHeaders.Constants.ContentTypeOptionsConstants.NoSniff">
+            <summary>
+            禁用內容嗅探
+            </summary>
+        </member>
+        <member name="T:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder.OneYearInSeconds">
+            <summary>
+            一年中的秒數
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder.AddDefaultSecurePolicy">
+            <summary>
+            按照最安全的方法添加默認標題
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder.AddContentTypeOptionsNoSniff">
+            <summary>
+            將X-Content-Type-Options nosniff添加到所有請求
+            可以設置為防止MIME類型混淆攻擊
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder.RemoveHeader(System.String)">
+            <summary>
+            從所有請求中刪除標題
+            </summary>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder.Build">
+            <summary>
+            <see cref="T:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersPolicy"/> 
+            </summary>
+            <returns> <see cref="T:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersPolicy"/>.</returns>
+        </member>
+        <member name="T:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersMiddleware">
+            <summary>
+            自定义中间件
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,AspCoreApi.Middleware.HttpHeaders.SecurityHeadersPolicy)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="policy"></param>
+        </member>
+        <member name="M:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.Middleware.HttpHeaders.SecurityHeadersPolicy">
+            <summary>
+            添加和删除的标头的列表：
+            </summary>
+        </member>
+        <member name="T:AspCoreApi.Middleware.MiddlewareExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Middleware.MiddlewareExtensions.UseHttpContextMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            自定义Http 中间件
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AspCoreApi.Middleware.MiddlewareExtensions.UseSecurityHeadersMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,AspCoreApi.Middleware.HttpHeaders.SecurityHeadersBuilder)">
+            <summary>
+             自定义UseSecurityHeaders 中间件
+            </summary>
+            <param name="app"></param>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AspCoreApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AspCoreApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:AspCoreApi.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AspCoreApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            構造函數
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:AspCoreApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            运行时调用此方法。使用此方法向容器添加服务。
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AspCoreApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            运行时调用此方法。使用此方法配置HTTP请求管道。
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

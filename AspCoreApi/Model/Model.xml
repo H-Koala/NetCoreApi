@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Model</name>
+    </assembly>
+    <members>
+        <member name="T:Model.ParameterModel.Test.MPeople">
+            <summary>
+            测试类
+            </summary>
+        </member>
+        <member name="P:Model.ParameterModel.Test.MPeople.name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Model.ParameterModel.Test.MPeople.age">
+            <summary>
+            年纪
+            </summary>
+        </member>
+        <member name="T:Model.ViewModel.ReturnMessageModel`1">
+            <summary>
+            返回數據模型
+            </summary>
+        </member>
+        <member name="P:Model.ViewModel.ReturnMessageModel`1.Status">
+            <summary>
+            0表示成功,1表示失敗,3表示Token 失效或者無效
+            </summary>
+        </member>
+        <member name="P:Model.ViewModel.ReturnMessageModel`1.Message">
+            <summary>
+            提示信息
+            </summary>
+        </member>
+        <member name="P:Model.ViewModel.ReturnMessageModel`1.Data">
+            <summary>
+             返回數據
+            </summary>
+        </member>
+        <member name="M:Model.ViewModel.ReturnMessageModel`1.#ctor">
+            <summary>
+            无参数构造
+            </summary>
+        </member>
+        <member name="M:Model.ViewModel.ReturnMessageModel`1.#ctor(`0)">
+            <summary>
+            查询存在数据时，直接返回
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Model.ViewModel.ReturnMessageModel`1.#ctor(System.Int32,System.String,`0)">
+            <summary>
+            自定义返回数据的相关信息
+            </summary>
+            <param name="status"></param>
+            <param name="message"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:Model.ViewModel.Test.MInfo">
+            <summary>
+            测试输出
+            </summary>
+        </member>
+        <member name="P:Model.ViewModel.Test.MInfo.name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Model.ViewModel.Test.MInfo.age">
+            <summary>
+            年纪
+            </summary>
+        </member>
+    </members>
+</doc>
