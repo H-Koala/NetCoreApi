@@ -10,7 +10,7 @@
 * RESTful API
 * 使用AufoFac 管理容器
 * 封装好了Dapper，开箱即用
-* Dapper 事务管理，仅需给方法打特性标签[RESTful API]
+* Dapper 事务管理，仅需给方法打特性标签[WorkCommit]
 * 使用了MiniProfile 对Dapper or EF Core 生成的SQL 进行监控
 * NLog 的使用
 * JWT 支持
