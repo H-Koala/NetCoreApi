@@ -1,4 +1,4 @@
-## AspCoreApi
+## NetCoreApi
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/H-Koala/AspCoreApi/pulls)
 [![netcore](https://img.shields.io/badge/netcore-2.1-blue)](netcore)
@@ -7,6 +7,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/H-Koala/AspCoreApi.svg?style=social&label=Fork)](https://github.com/H-Koala/AspCoreApi)
 
 #### 项目介绍
+######## 一个基于netcore2.1 的Web API 示例项目
 * Restful API
 * AufoFac支持
 * 封装好Dapper，开箱即用(Oracle+MMSYQL+MYSQL支持)
