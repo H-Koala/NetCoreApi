@@ -7,7 +7,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/H-Koala/AspCoreApi.svg?style=social&label=Fork)](https://github.com/H-Koala/AspCoreApi)
 
 #### 项目介绍
-######## 一个基于netcore2.1 的Web API 示例项目
+一个基于netcore2.1 的Web API 示例项目
 * Restful API
 * AufoFac支持
 * 封装好Dapper，开箱即用(Oracle+MMSYQL+MYSQL支持)
